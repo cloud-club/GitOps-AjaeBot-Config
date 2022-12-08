@@ -1,0 +1,1 @@
+# GitOps-AjaeBot Manifest Repo
