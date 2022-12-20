@@ -1,0 +1,6 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/cloud-club/gitops-ajaebot
+  tag: sha-7fcbb88
+  pullPolicy: Always
