@@ -17,7 +17,6 @@ spec:
       containers:
       - name: ajae-container
         image: {{ .Values.image.repository}}:{{.Values.image.tag }} # version 명시 하지 않을 경우 deault 로 `latest` 로 인식한다.
-        imagePullPolicy: {{.Values.image.pullPolicy}}
         env: # slackbot token 환경 변수로 넣어주기
           - name: SLACK_BOT_TOKEN
             valueFrom:
