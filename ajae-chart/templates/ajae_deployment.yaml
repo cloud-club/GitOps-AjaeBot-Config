@@ -17,14 +17,13 @@ spec:
       containers:
       - name: ajae-container
         image: {{ .Values.image.repository}}:{{.Values.image.tag }} # version 명시 하지 않을 경우 deault 로 `latest` 로 인식한다.
-        # slackbot token 환경 변수로 넣어주기
         env:
-          - name: SLACK_BOT_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: juyoung-slack # k8s secret 명
-                key: token
-                optional: false # 반드시 있어야 실행
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: juyoung-slack # k8s secret 명
+              key: token
+              optional: false # 반드시 있어야 실행
       imagePullSecrets: # image pull 받기 위한 github token file (secret)
       - name: juyoung-github # github credentials 로 생성한 secret
 
