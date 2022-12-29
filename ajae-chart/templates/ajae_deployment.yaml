@@ -24,6 +24,7 @@ spec:
               name: juyoung-slack # k8s secret 명
               key: token
               optional: false # 반드시 있어야 실행
+        restartPolicy: Never
         imagePullPolicy: {{.Values.image.pullPolicy}}
       imagePullSecrets: # image pull 받기 위한 github token file (secret)
       - name: juyoung-github # github credentials 로 생성한 secret
