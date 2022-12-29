@@ -25,9 +25,6 @@ spec:
               key: token
               optional: false # 반드시 있어야 실행
         imagePullPolicy: {{.Values.image.pullPolicy}}
-        # Just spin & wait forever
-        command: [ "/bin/bash", "-c", "--" ]
-        args: [ "while true; do sleep 30; done;" ]
       imagePullSecrets: # image pull 받기 위한 github token file (secret)
       - name: juyoung-github # github credentials 로 생성한 secret
 
