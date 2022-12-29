@@ -1,4 +1,4 @@
 replicaCount: 1
 image:
   repository: ghcr.io/cloud-club/gitops-ajaebot
-  tag: sha-85237f5
+  tag: sha-c2bdd69
