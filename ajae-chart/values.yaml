@@ -2,3 +2,4 @@ replicaCount: 1
 image:
   repository: ghcr.io/cloud-club/gitops-ajaebot
   tag: sha-d1d0eff
+  pullPolicy: Always
